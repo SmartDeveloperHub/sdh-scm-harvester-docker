@@ -24,6 +24,9 @@ COPY files/web.xml WEB-INF/web.xml
 ADD ./my_init.d/ /etc/my_init.d/
 ONBUILD ADD ./my_init.d/ /etc/my_init.d/
 
+RUN mvn -B -U dependency:copy -DoutputFile=scmharvester.war
+RUN jar -uf scmharvester.war WEB-INF/
+
 CMD ["/sbin/my_init"]
 
 EXPOSE 8080
