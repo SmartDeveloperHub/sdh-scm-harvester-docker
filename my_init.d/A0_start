@@ -1,8 +1,6 @@
 #!/bin/sh
 
 # Install Harvester
-cd /opt/tomcat/webapps
-mvn -B -U dependency:copy -DoutputFile=scmharvester.war
-jar -uf scmharvester.war WEB-INF/
-sudo ../bin/startup.sh
+cd /opt/tomcat/
+sudo bin/startup.sh
 
