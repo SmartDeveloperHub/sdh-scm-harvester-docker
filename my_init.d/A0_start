@@ -1,5 +1,4 @@
 #!/bin/sh
-
-# Start Tomcat
-sudo ../bin/startup.sh
-
+cd /opt/scm-harvester/bin/
+export MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=256m"
+mvn &

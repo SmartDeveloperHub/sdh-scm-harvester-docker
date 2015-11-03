@@ -3,7 +3,7 @@ MAINTAINER Alejandro F. Carrera
 
 # Exports
 ENV HARVESTER_HOME="/opt/scm-harvester"
-ENV GITLAB_ENHANCER="http://192.168.0.10:5000/api"
+ENV GITLAB_ENHANCER="http://enhancer:5000/api"
 
 COPY files/pom.xml $HARVESTER_HOME/pom.xml
 
