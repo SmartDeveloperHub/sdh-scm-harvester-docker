@@ -7,6 +7,8 @@ ENV CATALINA_HOME="/opt/tomcat" \
 	TOMCAT="http://apache.rediris.es/tomcat/tomcat-7/v7.0.65/bin/apache-tomcat-7.0.65.tar.gz"
 ENV PATH $CATALINA_HOME/bin:$PATH
 
+ENV GITLAB_ENHANCER=http://enhancer:5000/api
+
 # Install Tomcat 7
 RUN curl -L "$TOMCAT" -o $(basename "$TOMCAT")
 RUN tar -zxvf $(basename "$TOMCAT")

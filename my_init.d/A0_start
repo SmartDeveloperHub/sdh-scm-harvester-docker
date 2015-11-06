@@ -2,5 +2,5 @@
 
 # Install Harvester
 cd /opt/tomcat/
-sudo bin/startup.sh
+sudo -E bin/startup.sh
 
