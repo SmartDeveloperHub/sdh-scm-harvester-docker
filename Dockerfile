@@ -11,7 +11,7 @@ ADD ./my_init.d/ /etc/my_init.d/
 ONBUILD ADD ./my_init.d/ /etc/my_init.d/
 
 WORKDIR /opt/scm-harvester
-RUN mvn
+RUN mvn -U
 
 CMD ["/sbin/my_init"]
 
