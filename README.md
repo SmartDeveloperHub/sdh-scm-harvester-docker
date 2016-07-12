@@ -1,7 +1,37 @@
 # SDH SCM Harvester Docker
 
+Deploying and executing the __SCM Harvester Frontend__ of the *Smart Developer Hub* project with Docker.
 
-Deploying the Smart Developer Hub SCM harvester service with Docker.
+## Usage instructions
+
+### Building the Docker image
+
+The first step consists in building the image defined by `Dockerfile` in the repository's root directory:
+
+```bash
+docker build -t sdh/scm-harvester .
+```
+
+### Running the container
+
+In order to run the *SCM Harvester Frontend* it is necessary to define several environment variables:
+
+* __HTTP_HOST__: the fully qualified domain name to be used by the *SCM Harvester Frontend*, so that proper dereferenciable URLs are generated. It is worth nothing that this domain name should point to the host where the container is to be run, either directly or via a reverse proxy.
+
+* __HTTP_PORT__: the port to be used by the *SCM Harvester Frontend*. This port will have to be exposed by the container. 
+
+* __TARGET__: the GitLab Enhancer instance to be used by the *SCM Harvester Frontend*. The endpoint can be specified using an IP address (*e.g.*, http://192.168.1.33:5000/api) or a fully qualified domain name (*e.g.*, http://gitlab_enhancer.smartdeveloperhub.org:5000/api). 
+
+Taking all of this into account a container could be executed as follows:
+
+```bash
+docker run -e "HTTP_HOST=scmh.smartdeveloperhub.org" \
+           -e "HTTP_PORT=8088" \
+           -e "TARGET=http://gitlab_enhancer.smartdeveloperhub.org:5000/api" \ 
+           -p 8088:8088 \
+           --name sdh-scm-harvester 
+           sdh/scm-harvester
+```
 
 ### License
 
