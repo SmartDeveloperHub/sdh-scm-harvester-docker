@@ -26,7 +26,7 @@
     #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
+<project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
@@ -34,7 +34,7 @@
 
 	<groupId>org.smartdeveloperhub.harvesters.scm</groupId>
 	<artifactId>sdh-scm-harvester</artifactId>
-	<version>0.2.0</version>
+	<version>0.3.0</version>
 	<packaging>pom</packaging>
 
 	<repositories>
@@ -45,7 +45,7 @@
 			<releases><enabled>false</enabled></releases>
 		</repository>
 	</repositories>
-	
+
 	<build>
 		<defaultGoal>initialize</defaultGoal>
 		<plugins>
@@ -94,7 +94,7 @@
 							<artifactItems>
 								<artifactItem>
 									<groupId>${project.groupId}</groupId>
-									<artifactId>scm-harvester-container-ldp4j</artifactId>
+									<artifactId>scm-harvester-container</artifactId>
 									<version>${project.version}</version>
 									<type>zip</type>
 									<overWrite>true</overWrite>
