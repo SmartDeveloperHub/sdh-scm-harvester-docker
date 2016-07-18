@@ -1,5 +1,5 @@
 FROM alejandrofcarrera/phusion.maven
-MAINTAINER Alejandro F. Carrera
+MAINTAINER Miguel Esteban Gutierrez
 
 # Exports
 ENV HARVESTER_HOME="/opt/scm-harvester"

@@ -1,4 +1,6 @@
 #!/bin/sh
-cd /opt/scm-harvester/bin/
+cd /opt/scm-harvester
+mvn -U
+cd bin/
 export MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=256m"
-mvn -U &
+mvn -U -Dharvester.target=$TARGET -Dharvester.http.port=$HTTP_PORT &
